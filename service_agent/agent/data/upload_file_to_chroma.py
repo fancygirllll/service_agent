@@ -1,6 +1,14 @@
-import os, time, chromadb, fitz
+import os
+import time
+import chromadb
+import fitz
 from sentence_transformers import SentenceTransformer
 from docx import Document
+
+# 检查并创建 chroma_data 文件夹
+if not os.path.exists('chroma_data'):
+    os.makedirs('chroma_data')
+    print("chroma_data 文件夹已创建。")
 
 # 初始化 Sentence-Transformer 模型
 model = SentenceTransformer('all-MiniLM-L6-v2')
