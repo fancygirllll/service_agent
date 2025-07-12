@@ -12,7 +12,7 @@ async def knowledge_base_tool(
     filename = "text"
     try:
         model = SentenceTransformer('all-MiniLM-L6-v2')
-        chroma_client = chromadb.PersistentClient(path="./service_agent/data/chroma_data/")
+        chroma_client = chromadb.PersistentClient(path="./agent/data/chroma_data/")
         collection_name = "test001"
 
         query = tool_context.state["user_query"]

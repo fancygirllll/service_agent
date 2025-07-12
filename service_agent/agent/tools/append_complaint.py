@@ -15,7 +15,7 @@ def append_complaint_tool(
     row = f"{name},{contact},{issue},{request}"
 
     try:
-        csv_path = "./service_agent/data/complaints.csv"
+        csv_path = "./agent/data/complaints.csv"
         file_exists = os.path.exists(csv_path)
 
         with open(csv_path, "a", newline="", encoding="utf-8-sig") as f:
